@@ -20,6 +20,12 @@
             case 'fullwidth_text':
               include 'blocks/fullwidth_text.php';
               break;
+            case 'banner_block':
+              include 'blocks/banner_block.php';
+              break;
+            case 'video_feature_block':
+              include 'blocks/video_feature.php';
+              break;
             
           }
         }

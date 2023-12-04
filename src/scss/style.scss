@@ -11,15 +11,16 @@ Version: THEME_VERSION
 @import 'mixins';
 @import 'global'; 
 @import 'footer';
+@import 'header';
 
 // Navigation
 
-
 // 404
 
-
 // Blocks
-
+@import './components/banner';
+@import './components/form-component';
+@import './components/video-feature';
 // Shortcodes
 
 

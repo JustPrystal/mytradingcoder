@@ -1,0 +1,44 @@
+.header{
+    background-color:#fff;
+    .inner{
+        padding:25px 0px;
+        display:flex;
+        max-width:1240px;
+        margin:0 auto;
+        justify-content: space-between;
+        .logo{
+            max-width:300px;
+            img{
+                width:100%;
+                height:auto;
+            }
+        }
+        .nav-menu{
+            display:flex;
+            align-items: center;
+            gap:30px;
+            .menu-item{
+                a{
+                    color:#000;
+                    transition:all .3s ease;
+                    &:hover{
+                        color:$purple;
+                    }
+                }
+                &.button{
+                    a{
+                        padding:19px 50px;
+                        border:1px solid #000;
+                        font-size:14px;
+                        border-radius:30px;
+                        &:hover{
+                            background-color:$purple;
+                            border-color:$purple;
+                            color:#fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

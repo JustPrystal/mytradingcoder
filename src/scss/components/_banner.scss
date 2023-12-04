@@ -1,0 +1,95 @@
+.banner-block{
+    position:relative;
+    overflow:hidden;
+    &:after{
+        content:"";
+        pointer-events: none;
+        width:1000px;
+        height:1000px;
+        background: linear-gradient(142deg, rgba(248, 44, 44, 0.20) -21.46%, rgba(236, 135, 78, 0.20) 7.7%, rgba(231, 139, 32, 0.20) 29.92%, rgba(108, 61, 244, 0.20) 53.53%, rgba(255, 38, 51, 0.20) 81.3%, rgba(255, 24, 24, 0.20) 111.85%);
+        border-radius:50%;
+        position:absolute;
+        top:-30%;
+        left:0%;
+        filter: blur(80px);
+        transform:scale(1.5);
+        animation: spin2 10s linear infinite;
+    }
+    &:before{
+        content:"";
+        pointer-events: none;
+        width:1000px;
+        height:1000px;
+        background: linear-gradient(38deg, #905DF8 25.8%, rgba(201, 209, 249, 0.69) 71.87%, rgba(243, 209, 246, 0.43) 78.25%, rgba(223, 214, 241, 0.00) 118.18%);
+        border-radius:50%;
+        position:absolute;
+        top:-20%;
+        filter: blur(100px);
+        right:-50%;
+        transform:translateX(-50%) scale(1.7) rotate(200deg);
+        animation: spin 15s linear infinite;
+    }
+    .inner{
+        max-width:1240px;
+        margin:0 auto;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:40px 0px;
+        position:relative;
+        z-index:1;
+        .left-col{
+            flex: 0 0 40%;
+            .heading{
+                font-size:56px;
+                margin:0;
+                font-weight:700;
+                line-height:1.2;
+                margin-bottom:20px;
+                span{
+                    font-style:italic;
+                    color:$purple;
+                    font-weight:600;
+                }
+            }
+            .description{
+                color: #2F2F2F;
+                line-height:1.3;
+                font-size:18px;
+                letter-spacing: 0.5px;
+                margin-bottom:40px;
+            }
+            .button-group{
+                a{
+                    font-weight:500;
+                    color:#fff;
+                    background-color:$purple;
+                    padding:17px 24px;
+                    border-radius:30px;
+                    transition:background-color .3s ease;
+                    &:hover{
+                        background-color:$purplehover;
+                    }
+                }
+            }
+        }
+        .right-col{
+            flex: 0 0 40%;
+        }
+    }
+    
+}
+@keyframes spin{
+    from{
+        transform: translateX(-50%) scale(1.7) rotate(0deg);
+    }to{
+        transform: translateX(-50%) scale(1.7) rotate(360deg);
+    }
+}
+@keyframes spin2{
+    from{
+        transform: scale(1.5) rotate(0deg);
+    }to{
+        transform: scale(1.5) rotate(360deg);
+    }
+}

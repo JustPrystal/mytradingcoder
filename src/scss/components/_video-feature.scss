@@ -1,0 +1,138 @@
+.video-feature{
+    background-color:#131313;
+    position:relative;
+    // overflow:hidden;
+    margin-bottom:100px;
+    &:before{
+        content:"";
+        width:1000px;
+        height:1000px;
+        border-radius:50%;
+        background-color:rgba(255,255,255,0.1);
+        position:absolute;
+        top:-70%;
+        left:-10%;
+        
+        filter:blur(100px);
+    }
+    &:after{
+        content:"";
+        width:50px;
+        height:50px;
+        background-color:inherit;
+        position:absolute;;
+        bottom:-25px;
+        left:50%;
+        transform:translateX(-50%) rotate(-45deg);
+        border-bottom-left-radius:15px;
+    }
+    .inner{
+        padding:60px 0px;
+        padding-bottom:100px;
+        max-width:1240px;
+        margin:0 auto;
+        position:relative;
+        z-index:1;
+        .sub-heading{
+            text-align: center;
+            color:$purple;
+            font-size:20px;
+            font-weight:500;
+            letter-spacing: 4px;
+        }
+        .heading{
+            color:#fff;
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 130%;
+            margin-bottom:70px;
+        }
+        .inner-wrap{
+            display:flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            .left-col{
+                flex: 0 0 40%;
+                background-color: #F5EFFF;
+                border-radius:20px;
+                padding:30px 20px;
+                margin-top:20px;
+                .feature{
+                    display:flex;
+                    align-items: center;
+                    gap:10px;   
+                    .text-wrap{
+                        display:inherit;
+                        align-items: center;
+                        font-size:40px;
+                        font-weight:600;
+                        line-height:1;
+                        gap:10px;
+                    }
+                }
+                .accomplishments{
+                    padding-left:20px;
+                    padding-right:20px;
+                    li{
+                        margin-bottom:50px;
+                        position:relative;
+                        font-weight: 500;
+                        line-height: 162.5%;
+                        &:after{
+                            content:"&";
+                            position:absolute;
+                            bottom:-38px;
+                            left:50%;
+                            transform:translateX(-50%);
+                            background-color:#F5EFFF;
+                            padding:0px 5px;
+                        }
+                        &:before{
+                            content:"";
+                            position:absolute;
+                            width:100px;
+                            height:1px;
+                            background-color:#A1A1A1;
+                            bottom:-25px;
+                            left:50%;
+                            transform:translateX(-50%);
+                        }
+                        &:last-child{
+                            margin-bottom:0;
+                            &:after, &:before{
+                                display:none;
+                            }
+                        }
+                    }
+                }
+            }
+            .right-col{
+                flex: 0 0 50%;
+                .video-container{
+                    margin-bottom:30px;
+                    video{
+                        width:100%;
+                        border-radius:25px;
+                        height:auto;
+                    }
+                }
+                .button-group{
+                    a{
+                        width:100%;
+                        padding:17px 0px;
+                        background-color:$purple;
+                        color:#fff;
+                        border-radius:30px;
+                        text-align: center;
+                        font-weight: 500;
+                        transition:all .3s ease;
+                        &:hover{
+                            background-color:$purplehover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
