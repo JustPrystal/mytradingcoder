@@ -1,1 +1,1 @@
-# mytradingcoder
+# Stature_Victor_WordpressTemplate
