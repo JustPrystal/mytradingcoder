@@ -26,6 +26,12 @@
             case 'video_feature_block':
               include 'blocks/video_feature.php';
               break;
+            case 'slider_block':
+              include 'blocks/slider_block.php';
+              break;
+            case 'linear_slider_block':
+              include 'blocks/linear_slider.php';
+              break;
             
           }
         }

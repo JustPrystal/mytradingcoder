@@ -1,0 +1,93 @@
+.slider-block{
+    position:relative;
+    &:not(.dark){
+        &:before{
+            content:"";
+            position:absolute;
+            width:50%;
+            height:100%;
+            top:0;
+            left:0;
+            background:linear-gradient(120deg, rgba(177, 147, 236, 0.60) 21.74%, rgba(201, 209, 249, 0.42) 50.01%, rgba(243, 209, 246, 0.26) 73.97%, rgba(223, 214, 241, 0.00) 113.75%);
+            filter: blur(82px);
+            border-radius:50%;
+            transform:scale(1.3);
+            pointer-events: none;
+        }
+    }
+    &:after{
+        content:"";
+        width:50px;
+        height:50px;
+        background-color:inherit;
+        position:absolute;;
+        bottom:-25px;
+        left:50%;
+        transform:translateX(-50%) rotate(-45deg);
+        border-bottom-left-radius:15px;
+    }
+    .inner{
+        padding:60px 0px;
+        padding-bottom:100px;
+        max-width:1600px;
+        margin:0 auto;
+        position:relative;
+        z-index:1;
+        .heading{
+            color:#000;
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 130%;
+            margin-bottom:20px;
+        }
+        .description{
+            text-align: center;
+            max-width:800px;
+            margin:0 auto;
+            color: #2F2F2F;
+            line-height: 162.5%;
+            margin-bottom:70px;
+        }
+        .slider-wrap{
+            display:flex;
+            gap:30px;
+            .slide-item{
+                flex : 0 0 auto;
+                width:calc(20% - 24px);
+                .image-wrap{
+                    img{
+                        width:100%;
+                        aspect-ratio: 149/121;
+                        margin-bottom:20px;
+                        border-radius:20px;
+                        object-fit: cover;
+                    }
+                }
+                .slide-description{
+                    color:#000;
+                    font-size:20px;
+                    line-height:1.2;
+                }
+            }
+        }
+    }
+    &.dark{
+        background-color:#131313;
+        .inner{
+            .heading{
+                color:#fff;
+            }
+            .description{
+                color:rgba(255,255,255,0.6);
+            }
+            .slider-wrap{
+                .slide-item{
+                    .slide-description{
+                        color:rgba(255,255,255,0.7);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,8 @@
 .video-feature{
     background-color:#131313;
     position:relative;
+    z-index:1;
     // overflow:hidden;
-    margin-bottom:100px;
     &:before{
         content:"";
         width:1000px;
@@ -25,6 +25,7 @@
         left:50%;
         transform:translateX(-50%) rotate(-45deg);
         border-bottom-left-radius:15px;
+        
     }
     .inner{
         padding:60px 0px;
