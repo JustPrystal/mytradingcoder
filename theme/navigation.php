@@ -8,7 +8,9 @@
 <div class="header">
     <div class="inner">
         <div class="logo">
-            <img src="<?php echo $logo_desktop['url']?>" alt="">
+            <a href="<?php echo get_site_url();?>">
+                <img src="<?php echo $logo_desktop['url']?>" alt="">
+            </a>
         </div>
         <div class="nav-menu center">
             <?php if($menu_center){

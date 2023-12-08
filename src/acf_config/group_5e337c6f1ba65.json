@@ -168,6 +168,161 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_657119a0b955c": {
+                    "key": "layout_657119a0b955c",
+                    "name": "brokers_block",
+                    "label": "Brokers block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_657119a8b955d",
+                            "label": "fields",
+                            "name": "fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65711897f0f21"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_657129674e823": {
+                    "key": "layout_657129674e823",
+                    "name": "how_it_works",
+                    "label": "How it Works Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6571296f4e824",
+                            "label": "fields",
+                            "name": "fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6571290026a4a"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_65713798b10af": {
+                    "key": "layout_65713798b10af",
+                    "name": "faq",
+                    "label": "FAQ Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6571379db10b0",
+                            "label": "fields",
+                            "name": "fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_657136f7625cd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_657140b3d2cbf": {
+                    "key": "layout_657140b3d2cbf",
+                    "name": "cta_block",
+                    "label": "Cta Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_657140c9d2cc0",
+                            "label": "fields",
+                            "name": "fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6571408d8d519"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_65729058fc8d8": {
+                    "key": "layout_65729058fc8d8",
+                    "name": "reviews_block",
+                    "label": "Reviews Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6572905efc8d9",
+                            "label": "fields",
+                            "name": "fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65728ff436ce5"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Block",
@@ -203,5 +358,5 @@
     ],
     "active": 1,
     "description": "Block Chooser for all content types that will have blocks.",
-    "modified": 1701802706
+    "modified": 1702007189
 }

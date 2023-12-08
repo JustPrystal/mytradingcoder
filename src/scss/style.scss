@@ -13,7 +13,8 @@ Version: THEME_VERSION
 @import 'footer';
 @import 'header';
 
-// Navigation
+// Archives
+@import './archives/reviews';
 
 // 404
 
@@ -22,8 +23,10 @@ Version: THEME_VERSION
 @import './components/form-component';
 @import './components/video-feature';
 @import './components/slider-block';
-// Shortcodes
-
+@import './components/brokers';
+@import './components/how-it-works';
+@import './components/faq';
+@import './components/cta-block';
 
 table.xdebug-error.xe-warning {
     display: none;

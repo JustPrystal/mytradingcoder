@@ -1,0 +1,84 @@
+.faq{
+    position:relative;
+    &:before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background: linear-gradient(59deg, rgba(177, 147, 236, 0.60) 21.74%, rgba(201, 209, 249, 0.42) 50.01%, rgba(243, 209, 246, 0.26) 73.97%, rgba(223, 214, 241, 0.00) 113.75%);
+        filter: blur(82px);
+    }
+    .inner{
+        position:relative;
+        z-index:1;
+        padding:60px 0px;
+        padding-bottom:100px;
+        max-width:700px;
+        margin:0 auto;
+        .heading{
+            color:#000;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 130%;
+            margin-bottom:60px;
+        }
+        .faq-wrap{
+            .faq-item{
+                .faq-header{
+                    display:flex;
+                    align-items: flex-start;
+                    gap:20px;
+                    background-color:#fff;
+                    padding:24px 16px;
+                    border-bottom:1px solid rgba(0,0,0,0.05);
+                    transition:padding .3s ease;
+                    .circle{
+                        width:24px;
+                        height:24px;
+                        background-color:#804BD3;
+                        border-radius:50%;
+                    }
+                    .question{
+                        flex:1;
+                        display:flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }
+                .faq-body{
+                    display:none;
+                    max-width:624px;
+                    background-color:#fff;
+                    border-radius:10px;
+                    padding:15px 20px;
+                    margin-bottom:20px;
+                    margin-left:auto;
+                    margin-right:16px;
+                }
+                &:first-child{
+                    .faq-header{
+                        border-radius:10px 10px 0px 0px;
+                    }
+                }
+                &:last-child{
+                    border-bottom:0;
+                    .faq-header{
+                        border-radius:0px 0px 10px 10px;
+                    }
+                }
+                &.active{
+                    .faq-header{
+                        background-color:transparent;
+                        padding-bottom:10px;
+                        border-bottom:0;
+                        svg{
+                            transform:rotate(270deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+.brokers-block{
+    position:relative;
+    &:before{
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        width:100%;
+        height:100%;
+        background: linear-gradient(59deg, rgba(177, 147, 236, 0.60) 21.74%, rgba(201, 209, 249, 0.42) 50.01%, rgba(243, 209, 246, 0.26) 73.97%, rgba(223, 214, 241, 0.00) 113.75%);
+        filter: blur(82px);
+        pointer-events: none;
+    }
+    &:after{
+        content:"";
+        position:absolute;
+        top:0;
+        bottom:0;
+        right:-20%;
+        width:100%;
+        height:100%;
+        background: linear-gradient(59deg, rgba(177, 147, 236, 0.60) 21.74%, rgba(201, 209, 249, 0.42) 50.01%, rgba(243, 209, 246, 0.26) 73.97%, rgba(223, 214, 241, 0.00) 113.75%);
+        filter: blur(82px);
+        pointer-events: none;
+    }
+    .inner{
+        padding:60px 0px;
+        padding-bottom:100px;
+        max-width:1600px;
+        margin:0 auto;
+        position:relative;
+        z-index:1;
+        .heading{
+            color:#000;
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 130%;
+            margin-bottom:20px;
+        }
+        .description{
+            text-align: center;
+            max-width:1200px;
+            margin:0 auto;
+            color: #2F2F2F;
+            line-height: 162.5%;
+            margin-bottom:50px;
+        }
+        .brokers-wrap{
+            display:flex;
+            gap:40px;
+            align-items: flex-start;
+            .broker-col{
+                flex:1;
+                text-align: center;
+                .broker-class{
+                    display:inline-block;
+                    color:#fff;
+                    font-size:20px;
+                    padding:10px 28px;
+                    border-radius: 10px;
+                    margin-bottom:40px;
+                    background: linear-gradient(92deg, #000 -5.31%, rgba(0, 0, 0, 0.28) 223.67%);
+                }
+                .brokers-list{
+                    display:flex;
+                    flex-direction:column;
+                    .broker-item{
+                        border-radius: 20px;
+                        background-color: #F5EFFF;
+                        padding:20px 30px;
+                        margin-bottom:30px;
+                        cursor:pointer;
+                        transition:all .3s ease;
+                        &:hover, &.active{
+                            background-color:$purple;
+                            color:#fff;
+                            svg{
+                                *{
+                                    stroke:#fff !important;
+                                }
+                            }
+                        }
+                        .broker-header{
+                            display:flex;
+                            flex-direction:row;
+                            gap:20px;
+                            align-items: center;
+                            .broker-name{
+                                flex:1;
+                                font-size:26px;
+                                font-weight: 500;
+                                display:inline-flex;
+                                align-items: center;
+                                justify-content: space-between;
+                            }
+                        }
+                        .broker-body{
+                            display:none;
+                            text-align: left;
+                        }
+                        &.active{
+                            svg{
+                                transform:rotate(270deg);
+                            }
+                            .broker-body{
+                                margin-top:20px;
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

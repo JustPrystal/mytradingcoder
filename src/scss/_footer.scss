@@ -1,0 +1,81 @@
+.footer{
+    background:#131313;
+    .inner{
+        padding:60px 0px 20px 0px;
+        max-width:1240px;
+        position:relative;
+        margin:0 auto;
+        display:flex;
+        justify-content: space-between;
+        .logo-container{
+            .logo-wrap{
+                margin-bottom:20px;
+            }
+            .description{
+                font-size: 17px;
+                font-style: normal;
+                color:rgba(255,255,255,0.5);
+                font-weight: 400;
+                font-family:$inter;
+                max-width:330px;
+            }
+        }
+        .menu-wrap{
+            flex: 0 0 62%;
+            display:flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            gap:100px;
+            .menu-col{
+                .column-name{
+                    color:#fff;
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-bottom:15px;
+                    &.mob{
+                        display:none;
+                    }
+                }
+                .menu-inner{
+                    .menu-item{
+                        margin-bottom:12px;
+                        a{
+                            display:flex;
+                            align-items: center;
+                            font-weight: 400;
+                            gap:10px;
+                            color:rgba(255,255,255,0.5);
+                            transition:all .3s ease;
+                            &:hover{
+                                color:rgba(255,255,255,0.8);
+                                svg{
+                                    *{
+                                        fill:rgba(255,255,255,0.8);
+                                    }
+                                }
+                            }
+                        }
+                        &.last-child{
+                            margin-bottom:0;
+                        }
+                    }
+                    &.legal{
+                        border-top:1px solid rgba(255,255,255,0.08);
+                        margin-top:48px;
+                        padding-top:24px;
+                    }
+                }
+                &.contact{
+                    flex:1
+                }
+            }
+        }
+        .copyright-text{
+            position:absolute;
+            bottom:20px;
+            font-family:$inter;
+            left:0;
+            color:rgba(255,255,255,0.5);
+        }
+    }
+}
