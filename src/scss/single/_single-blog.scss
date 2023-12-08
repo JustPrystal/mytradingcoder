@@ -1,0 +1,176 @@
+.single-blog-template{
+    .breadcrumbs{
+        background:linear-gradient(37deg, rgba(201, 209, 249, 0.69) 25.78%, rgba(243, 209, 246, 0.43) 42.11%, rgba(223, 214, 241, 0.00) 126.95%);
+        .breadcrumbs-inner{
+            padding:20px 0px;
+            margin:0 auto;
+            max-width:1240px;
+            .breadcrumb-item{
+                font-size: 20px;
+                color:$purple;
+                font-weight: 500;
+                line-height:1;
+                &.active{
+                    color:rgba(0, 0, 0, 0.50);
+                }
+            }
+        }
+    }
+    .inner{
+        padding:40px 0px;
+        max-width:1240px;
+        margin:0 auto;
+        padding-bottom:100px;
+        
+        .author-info{
+            display:flex;
+            gap:10px;
+            align-items: center;
+            margin-bottom:30px;
+            .image-col{
+                img{
+                    width:50px;
+                    height:50px;
+                    border-radius:50%;
+                    object-fit: cover;
+                }
+            }
+            .author-name{
+                font-size: 24px;
+                color:$purple;
+                font-weight: 600;
+                line-height:100%;
+            }
+            .post-date{
+                color:#6D6E76;
+                font-size:16px;
+            }
+        }
+        .heading{
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom:20px;
+            margin-top:0px;
+            line-height: 133.3%;
+        }
+        .categories{
+            margin-bottom:40px;
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
+            span{
+                padding:8px 16px;
+                font-size:20px;
+                border-radius:5px;
+                background-color:#F4F4F4
+            }
+        }
+        .featured-image{
+            margin-bottom:30px;
+            img{
+                width:100%;
+                height:auto;
+                border-radius:20px;
+            }
+        }
+        .content{
+            h2{
+                font-size: 32px;
+                font-weight: 600;
+                margin:20px 0px;
+            }
+            p{
+                color:#6D6E76;
+                font-size:16px;
+                line-height:175%;
+            }
+            ul{
+                padding:60px 60px;
+                border-radius:20px;
+                background:linear-gradient(59deg, rgba(156, 156, 156, 0.29) 21.74%, rgba(238, 231, 251, 0.60) 113.73%, rgba(243, 209, 246, 0.26) 113.74%, rgba(223, 214, 241, 0.00) 113.75%);
+                li{
+                    font-size: 22px;
+                    color:rgba(0,0,0,0.7);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+.recommended-articles{
+    border-top:1px solid rgba(0, 0, 0, 0.07);
+    .inner{
+        padding:40px 0px;
+        padding-bottom:80px;
+        max-width:1240px;
+        margin:0 auto;
+        .heading{
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom:20px;
+        }
+        .blogs-wrap{
+            display:flex;
+            flex-wrap:wrap;
+            gap:30px;
+            .blog-item{
+                flex: 0 0 calc(33.33% - 20px);
+                background-color:#fff;
+                border-radius:20px;
+                .image-wrap{
+                    img{
+                        width:100%;
+                        height:300px;
+                        object-fit: cover;
+                        border-radius:20px;
+                    }
+                }
+                .content-wrap{
+                    padding:20px 0px;
+                    .categories{
+                        margin-bottom:20px;
+                        display:flex;
+                        gap:10px;
+                        flex-wrap:wrap;
+                        span{
+                            padding:4px 8px;
+                            border-radius:3px;
+                            font-size:14px;
+                            background-color:#F4F4F4
+                        }
+                    }
+                    .title{
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 140%;
+                        margin-bottom:8px;
+                    }
+                    .short-description{
+                        font-size: 16px;
+                        font-weight: 400;
+                        margin-bottom:20px;
+                        line-height: 150%;
+                    }
+                    .button-wrap{
+                        a{
+                            display:flex;
+                            align-items: center;
+
+                            color:#000;
+                            gap:2px;
+                            transition:all .3s ease;
+                            &:hover{
+                                color:$purplehover;
+                                svg{
+                                    *{
+                                        fill:$purple
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
