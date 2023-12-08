@@ -15,6 +15,7 @@ Version: THEME_VERSION
 
 // Archives
 @import './archives/reviews';
+@import './archives/blogs';
 
 // 404
 
@@ -27,6 +28,7 @@ Version: THEME_VERSION
 @import './components/how-it-works';
 @import './components/faq';
 @import './components/cta-block';
+@import './components/review-slider';
 
 table.xdebug-error.xe-warning {
     display: none;

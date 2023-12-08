@@ -44,7 +44,7 @@
             case 'cta_block':
               include 'blocks/cta_block.php';
               break;
-            case 'review_block':
+            case 'reviews_block':
               include 'blocks/review_block.php';
               break;
           }
