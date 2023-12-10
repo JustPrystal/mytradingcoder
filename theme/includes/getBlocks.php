@@ -47,6 +47,9 @@
             case 'reviews_block':
               include 'blocks/review_block.php';
               break;
+            case 'contact_feature':
+              include 'blocks/contact_feature.php';
+              break;
           }
         }
       }

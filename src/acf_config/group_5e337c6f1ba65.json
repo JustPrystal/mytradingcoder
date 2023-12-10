@@ -323,6 +323,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_65744bf852c13": {
+                    "key": "layout_65744bf852c13",
+                    "name": "contact_feature",
+                    "label": "Contact Feature",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65744c0752c14",
+                            "label": "fields",
+                            "name": "fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65744b8bb3ff3"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Block",
@@ -358,5 +389,5 @@
     ],
     "active": 1,
     "description": "Block Chooser for all content types that will have blocks.",
-    "modified": 1702007189
+    "modified": 1702120544
 }

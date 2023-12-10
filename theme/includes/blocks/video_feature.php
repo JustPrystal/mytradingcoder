@@ -1,4 +1,4 @@
-<div class="video-feature">
+<div class="video-feature <?php if($block['show_arrow']){ echo 'arrow'; }?>">
     <div class="inner">
         <div class="sub-heading"><?php echo $block['sub_heading']?></div>
         <div class="heading"><?php echo $block['heading']?></div>
