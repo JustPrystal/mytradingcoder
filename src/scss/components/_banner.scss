@@ -38,14 +38,40 @@
         padding:40px 0px;
         position:relative;
         z-index:1;
+        @include responsive(lg){
+            max-width:100%;
+            padding:40px;
+        }
+        @include responsive(md){
+            flex-wrap:wrap;
+        }
+        @include responsive(xs){
+            padding:30px 20px;
+        }
         .left-col{
             flex: 0 0 40%;
+            @include responsive(lg){
+                flex: 0 0 45%;
+            }
+            @include responsive(md){
+                flex: 0 0 100%;
+            }
             .heading{
                 font-size:56px;
                 margin:0;
                 font-weight:700;
                 line-height:1.2;
                 margin-bottom:20px;
+                @include responsive(lg){
+                    font-size:48px;
+                }
+                @include responsive(md){
+                    font-size:36px;
+                    text-align: center;
+                }
+                @include responsive(xs){
+                    font-size:30px;
+                }
                 span{
                     font-style:italic;
                     color:$purple;
@@ -58,8 +84,15 @@
                 font-size:18px;
                 letter-spacing: 0.5px;
                 margin-bottom:40px;
+                @include responsive(md){
+                    font-size:16px;
+                    text-align: center;
+                }
             }
             .button-group{
+                @include responsive(md){
+                    display:none;
+                }
                 a{
                     font-weight:500;
                     color:#fff;
@@ -75,6 +108,12 @@
         }
         .right-col{
             flex: 0 0 40%;
+            @include responsive(lg){
+                flex: 0 0 45%;
+            }
+            @include responsive(md){
+                flex: 0 0 100%;
+            }
         }
     }
     

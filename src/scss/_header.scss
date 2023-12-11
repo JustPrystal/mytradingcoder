@@ -1,5 +1,7 @@
 .header{
     background-color:#fff;
+    position:relative;
+    z-index:1000;
     .inner{
         padding:25px 0px;
         display:flex;
@@ -7,13 +9,44 @@
         margin:0 auto;
         align-items: center;
         justify-content: space-between;
+        @include responsive(lg){
+            max-width:100%;
+            padding:25px 40px;
+        }
+        @include responsive(xs){
+            padding:20px;
+        }
+        .mobile-menu-icon{
+            @media(min-width:991px){
+                display:none;
+            }
+            @include responsive(md){
+                flex: 0 0 135px;
+            }
+            @include responsive(xs){
+                flex: 0 0 105px;
+            }
+        }
         .logo{
             max-width:300px;
             display:flex;
             align-items: center;
+            @include responsive(lg){
+                max-width:200px;
+            }
             img{
                 width:100%;
                 height:auto;
+                &.mobile{
+                    @media(min-width:567px){
+                        display:none;
+                    }
+                }
+                &.desktop{
+                    @include responsive(xs){
+                        display:none;
+                    }
+                }
             }
         }
         .nav-menu{
@@ -28,12 +61,24 @@
                         color:$purple;
                     }
                 }
+                @include responsive(md){
+                    display:none;
+                }
                 &.button{
+                    @include responsive(md){
+                        display:block;
+                    }
                     a{
                         padding:19px 50px;
                         border:1px solid #000;
                         font-size:14px;
                         border-radius:30px;
+                        @include responsive(lg){
+                            padding: 17px 40px;
+                        }
+                        @include responsive(xs){
+                            padding: 14px 25px;
+                        }
                         &:hover{
                             background-color:$purple;
                             border-color:$purple;
@@ -41,6 +86,84 @@
                         }
                     }
                 }
+            }
+            &.center{
+                @include responsive(md){
+                    display:none;
+                }
+            }
+        }
+    }
+    .mobile-menu{
+        @media (min-width:991px){
+            display:none;
+        }
+        position:fixed;
+        top:0;
+        left:-100%;
+        bottom:0;
+        width:80%;
+        height:100%;
+        background:#fff;
+        border-radius:0px 25px 25px 0px;
+        transition: left 1s ease;
+        display:flex;
+        flex-direction:column;
+        @include responsive(xs){
+            width:90%;
+        }
+        &.active{
+            left:0%;
+        }
+        .top-bar{
+            padding:20px;
+            display:flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            .logo{
+                @include responsive(xs){
+                    max-width:200px;
+                    img{
+                        width:100%;
+                        height:auto;
+                    }
+                }
+            }
+            .close{
+                background-color:rgba(0, 0, 0, 0.10);
+                border-radius:50%;
+                padding:5px;
+            }
+        }
+        .menu-inner{
+            .menu-item{
+                padding:20px;
+                border-bottom:1px solid rgba(0, 0, 0, 0.12);
+                a{
+                    font-size: 16px;
+                    font-weight: 500;
+                    color:#000;
+                }
+            }
+        }
+        .copyright{
+            margin-top:auto;
+            padding:20px;
+            color:rgba(0,0,0,0.5);
+            font-size: 12px;
+            font-family:$inter;
+            font-weight: 400;
+            text-align: center;
+            border-top:1px solid rgba(0, 0, 0, 0.12);
+        }
+    }
+    &.menu-open{
+        @include responsive(md){
+            &:before{
+                content:"";
+                inset:0;
+                position:fixed;
+                background-color:rgba(0,0,0,0.5);
             }
         }
     }
