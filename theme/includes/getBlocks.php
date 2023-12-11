@@ -50,6 +50,9 @@
             case 'contact_feature':
               include 'blocks/contact_feature.php';
               break;
+            case 'contact_block':
+              include 'blocks/contact-block.php';
+              break;
           }
         }
       }
