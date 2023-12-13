@@ -1,0 +1,74 @@
+.page-404{
+    display:flex;
+    padding:100px 0px;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    overflow:hidden;
+    &:after{
+        content:"";
+        position:absolute;
+        width:50%;
+        top:0;
+        bottom:0;
+        right:0;
+        background:linear-gradient(142deg, rgba(248, 44, 44, 0.20) -21.46%, rgba(236, 135, 78, 0.20) 7.7%, rgba(231, 139, 32, 0.20) 29.92%, rgba(108, 61, 244, 0.20) 53.53%, rgba(255, 38, 51, 0.20) 81.3%, rgba(255, 24, 24, 0.20) 111.85%);
+        filter: blur(82px);
+        @include responsive(sm){
+            filter: blur(150px);
+        }
+        
+    }
+    &:before{
+        content:"";
+        position:absolute;
+        width:60%;
+        top:0;
+        bottom:0;
+        left:0;
+        background: linear-gradient(127deg, rgba(201, 209, 249, 0.69) 25.78%, rgba(243, 209, 246, 0.43) 42.11%, #4712B1 106.52%, rgba(223, 214, 241, 0.00) 126.95%);
+        filter: blur(82px);
+        @include responsive(sm){
+            filter: blur(150px);
+        }
+    }
+    .inner{
+        max-width:700px;
+        margin:0 auto;
+        text-align: center;
+        position:relative;
+        z-index:1;
+        @include responsive(sm){
+            max-width:100%;
+            padding:0px 20px;
+        }
+        .heading{
+            font-size:64px;
+            font-weight:700;
+        }
+        .sub-heading{
+            font-size:36px;
+            font-weight:500;
+            margin-bottom:20px;
+        }
+        .description{
+            font-size:16px;
+            font-weight:400;
+            margin-bottom:30px;
+        }
+        .button{
+            text-align:center;
+            a{
+                font-weight:500;
+                color:#fff;
+                background-color:$purple;
+                padding:17px 40px;
+                border-radius:30px;
+                transition:background-color .3s ease;
+                &:hover{
+                    background-color:$purplehover;
+                }
+            }
+        }
+    }
+}

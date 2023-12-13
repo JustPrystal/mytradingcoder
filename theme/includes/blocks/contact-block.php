@@ -39,10 +39,7 @@
                     </div>
                     <div class="form-description"><?php echo $block['hubspot_embed']['description'];?></div>
                 </div>
-                <!-- Start of Meetings Embed Script -->
-                    <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/ali-usmansajid02?embed=true"></div>
-                    <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
-                <!-- End of Meetings Embed Script -->
+                <?php echo $block['hubspot_embed']['embed_code']; ?>
             </div>
         </div>
     </div>

@@ -1,6 +1,7 @@
 .single-blog-template{
     @include responsive(md){
         background:linear-gradient(37deg, rgba(201, 209, 249, 0.69) 25.78%, rgba(243, 209, 246, 0.43) 42.11%, rgba(223, 214, 241, 0.00) 126.95%);
+        padding-bottom:20px;
     }
     .breadcrumbs{
         background:linear-gradient(37deg, rgba(201, 209, 249, 0.69) 25.78%, rgba(243, 209, 246, 0.43) 42.11%, rgba(223, 214, 241, 0.00) 126.95%);
@@ -45,8 +46,6 @@
             border-radius: 20px;
             margin-bottom: 0;
             margin-top: 0;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
         }
         
         .author-info{
@@ -169,6 +168,7 @@
     @include responsive(md){
         background:linear-gradient(180deg, rgba(201, 209, 249, 0.69) 25.78%, rgba(243, 209, 246, 0.43) 42.11%, rgba(223, 214, 241, 0.00) 126.95%);
         border-top:1px solid rgba(0, 0, 0, 0.10);
+        padding-bottom:20px;
     }
     .inner{
         background-color: white;
@@ -186,6 +186,7 @@
             margin-top: 0;
             margin-bottom: 0;
             padding-bottom:80px;
+            border-radius:20px;
         }
         .heading{
             font-size: 20px;

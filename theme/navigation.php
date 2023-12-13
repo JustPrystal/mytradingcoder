@@ -90,4 +90,34 @@
         jQuery('.mobile-menu').removeClass('active');
         jQuery('.header').removeClass('menu-open');
     })
+
+    //write a function that lets you smooth scroll to any element on the page
+    function smoothScroll(target){
+        jQuery('html, body').animate({
+            scrollTop: jQuery(target).offset().top
+        }, 1000);
+    }
+    //write a click function for each menu item that calls the smoothScroll function
+    jQuery('.nav-menu.center .menu-item a').click(function(e){
+        e.preventDefault();
+        if(window.location.href !== window.location.origin+'/'){
+           window.location.href =  jQuery(this).attr('href');
+           return;
+        }
+        var href = jQuery(this).attr('href');
+        var target = href.replace(window.location.origin+'/', '');
+        smoothScroll(target);
+    });
+    jQuery('.mobile-menu .menu-item a').click(function(e){
+        e.preventDefault();
+        if(window.location.href != window.location.origin+'/'){
+           window.location.href = jQuery(this).attr('href');
+           return;
+        }
+        jQuery('.mobile-menu').removeClass('active');
+        jQuery('.header').removeClass('menu-open');
+        var href = jQuery(this).attr('href');
+        var target = href.replace(window.location.origin+'/', '');
+        smoothScroll(target);
+    })
 </script>

@@ -1,4 +1,4 @@
-<div class="reviews-block">
+<div class="reviews-block" id="reviews">
     <div class="inner">
         <div class="sub-heading"><?php echo $block['sub-heading']; ?></div>
         <div class="heading"><?php echo $block['heading']; ?></div>

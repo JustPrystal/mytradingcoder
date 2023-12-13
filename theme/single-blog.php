@@ -23,7 +23,7 @@
         </div>
         <h1 class="heading"><?php the_title();?></h1>
         <div class="categories">
-            <?
+            <?php
                 $categories = get_the_category($post->ID);
                 foreach($categories as $category){
                     ?>
@@ -57,7 +57,7 @@
                         </div>
                         <div class="content-wrap">
                             <div class="categories">
-                                <?
+                                <?php
                                     $categories = get_the_category($blog->ID);
                                     foreach($categories as $category){
                                         ?>

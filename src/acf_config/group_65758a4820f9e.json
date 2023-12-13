@@ -149,6 +149,24 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_657a14604e788",
+                    "label": "Embed Code",
+                    "name": "embed_code",
+                    "type": "acf_code_field",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "mode": "htmlmixed",
+                    "theme": "monokai"
                 }
             ]
         }
@@ -170,5 +188,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1702260731
+    "modified": 1702499435
 }

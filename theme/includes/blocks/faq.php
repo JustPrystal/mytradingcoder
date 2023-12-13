@@ -1,4 +1,4 @@
-<div class="faq">
+<div class="faq" id="faq">
     <div class="inner">
         <div class="heading"><?php echo $block['heading']; ?></div>
         <div class="faq-wrap">

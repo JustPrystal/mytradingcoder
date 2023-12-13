@@ -5,7 +5,7 @@
     $video_mobile = $block['video_mobile']['url'];
 ?>
 
-<div class="video-feature <?php if($block['show_arrow']){ echo 'arrow'; }?>">
+<div class="video-feature <?php if($block['show_arrow']){ echo 'arrow'; }?>" id="why-me">
     <div class="inner">
         <div class="sub-heading"><?php echo $block['sub_heading']?></div>
         <div class="heading"><?php echo $block['heading']?></div>
