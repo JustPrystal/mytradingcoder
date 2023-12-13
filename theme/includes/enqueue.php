@@ -36,6 +36,13 @@
 				"version" => '1.8.1',
 				"loadInFooter" => false
 			],
+			[
+				"name" => 'custom.js', 
+				"type" => 'js',
+				"path" => $templatedir . '/custom.js',
+				"version" => '1.0.0',
+				"loadInFooter" => true
+			]
 		];
 		
 		foreach($enqueList as $asset) {	

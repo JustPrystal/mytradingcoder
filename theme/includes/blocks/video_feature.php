@@ -1,3 +1,10 @@
+<?php
+    $video_thumbnail = $block['video_thumbnail'];
+    $video = $block['video']['url'];
+    $video_thumbnail_mobile = $block['video_thumbnail_mobile'];
+    $video_mobile = $block['video_mobile']['url'];
+?>
+
 <div class="video-feature <?php if($block['show_arrow']){ echo 'arrow'; }?>">
     <div class="inner">
         <div class="sub-heading"><?php echo $block['sub_heading']?></div>
@@ -21,7 +28,14 @@
             </div>
             <div class="right-col">
                 <div class="video-container">
-                    <video src="<?php echo $block['video']['url']?>" controls></video>
+                    <picture class="video-thumbnail">
+                        <source srcset="<?php echo $video_thumbnail_mobile?>" media="(max-width: 567px)"/>
+                        <img src="<?php echo $video_thumbnail?>" alt="" >
+                    </picture>
+                    <video controls>
+                        <source src="<?php echo $video_mobile?>" media="(max-width: 567px)"/>
+                        <source src="<?php echo $video?>"/>
+                    </video>
                 </div>
                 <div class="button-group">
                     <a href="<?php echo $block['button']['url']; ?>" target="<?php echo $block['button']['target']?>"><?php echo $block['button']['title']; ?></a>

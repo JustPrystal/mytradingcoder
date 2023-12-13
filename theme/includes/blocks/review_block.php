@@ -72,5 +72,30 @@
         dots:false,
         pauseOnFocus:false,
         pauseOnHover:false,
+        responsive: [
+            {
+            breakpoint: 1280,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+            },
+            {
+            breakpoint: 991,
+            settings: {
+                dots: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                dots: true,
+                slidesToShow: 1,
+                centerPadding:'10%',
+            }
+            }
+        ]
     })
 </script>

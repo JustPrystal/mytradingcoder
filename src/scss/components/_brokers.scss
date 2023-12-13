@@ -7,6 +7,7 @@
         left:0;
         bottom:0;
         right:0;
+        z-index: 2;
         width:100%;
         height:100%;
         background: linear-gradient(59deg, rgba(177, 147, 236, 0.60) 21.74%, rgba(201, 209, 249, 0.42) 50.01%, rgba(243, 209, 246, 0.26) 73.97%, rgba(223, 214, 241, 0.00) 113.75%);
@@ -18,6 +19,7 @@
         position:absolute;
         top:0;
         bottom:0;
+        z-index: 2;
         right:-20%;
         width:100%;
         height:100%;
@@ -31,27 +33,52 @@
         max-width:1600px;
         margin:0 auto;
         position:relative;
-        z-index:1;
+        z-index:3;
+        @include responsive(xl){
+            padding: 60px 40px;
+            padding-bottom:100px;
+        }
+        @include responsive(lg){
+            padding: 60px 0px;
+            padding-bottom: 100px;
+        }
+        @include responsive(xs){
+            padding-bottom: 20px;
+        }
         .heading{
             color:#000;
             text-align: center;
             font-size: 48px;
             font-weight: 700;
             line-height: 130%;
+            padding: 0 20px;
             margin-bottom:20px;
+            @include responsive(lg){
+                font-size: 36px;
+            }
+            @include responsive(xs){
+                display: none;
+            }
         }
         .description{
+            padding: 0 20px;
             text-align: center;
             max-width:1200px;
             margin:0 auto;
             color: #2F2F2F;
             line-height: 162.5%;
             margin-bottom:50px;
+            @include responsive(xs){
+                display: none;
+            }
         }
         .brokers-wrap{
             display:flex;
             gap:40px;
             align-items: flex-start;
+            @include responsive(lg){
+                gap:20px;
+            }
             .broker-col{
                 flex:1;
                 text-align: center;
@@ -63,6 +90,9 @@
                     border-radius: 10px;
                     margin-bottom:40px;
                     background: linear-gradient(92deg, #000 -5.31%, rgba(0, 0, 0, 0.28) 223.67%);
+                    @include responsive(lg){
+                        margin-bottom:20px;
+                    }
                 }
                 .brokers-list{
                     display:flex;
@@ -83,11 +113,26 @@
                                 }
                             }
                         }
+                        @include responsive(lg){
+                            margin-bottom:20px;
+                            margin-left: 20px;
+                        }
                         .broker-header{
                             display:flex;
                             flex-direction:row;
                             gap:20px;
                             align-items: center;
+                            .broker-logo{
+                                img{
+                                    width: 100%;
+                                }
+                                @include responsive(xl){
+                                    width: 70px;
+                                }
+                                @include responsive(lg){
+                                    width: 60px;
+                                }
+                            }
                             .broker-name{
                                 flex:1;
                                 font-size:26px;
@@ -95,6 +140,12 @@
                                 display:inline-flex;
                                 align-items: center;
                                 justify-content: space-between;
+                                @include responsive(xl){
+                                    font-size: 20px;
+                                }
+                                @include responsive(lg){
+                                    font-size: 16px;
+                                }
                             }
                         }
                         .broker-body{
@@ -111,6 +162,50 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .slick-dots{
+        li{
+            margin: 0px -3px;
+            transition: 300ms ease;
+            &.slick-active{
+                width: 40px;
+                transition: 300ms ease;
+                button{
+                    width: 40px;
+                    transition: 300ms ease;
+                    &:before{
+                        transition: 300ms ease;
+                        opacity: 1;
+                        width: 30px;
+                        background-color: #8859D7;
+                    }
+                }
+            }
+            button{
+                transition: 300ms ease;
+                &:before{
+                    transition: 300ms ease;
+                    font-family: slick;
+                    font-size: 6px;
+                    line-height: 10px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    background-color: black;
+                    border-radius: 8px;
+                    width: 10px;
+                    height: 10px;
+                    transform: translate(-50%, -50%);
+                    content: '';
+                    text-align: center;
+                    opacity: .25;
+                    color: #000;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
                 }
             }
         }

@@ -4,6 +4,12 @@
         padding:60px 0px;
         max-width:1600px;
         margin:0 auto;
+        @include responsive(xl){
+            padding: 60px 40px;
+        }
+        @include responsive(xs){
+            padding: 20px;
+        }
         .sub-heading{
             text-align: center;
             color:#fff;
@@ -11,30 +17,65 @@
             font-weight:500;
             letter-spacing: 4px;
             margin-bottom:30px;
+            @include responsive(xs){
+                font-size:14px;
+                margin-bottom: 14px;
+            }
         }
         .heading{
             color:#fff;
             text-align: center;
-            font-size: 48px;
             font-weight: 700;
             line-height: 130%;
             margin-bottom:70px;
+            @include responsive(lg){
+                font-size: 36px;
+            }
+            @include responsive(xs){
+                font-size: 30px;
+                margin-bottom:30px;
+                letter-spacing: -1px;
+            }
         }
         .steps-wrap{
             display:flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             gap:30px;
             margin-bottom:80px;
+            @include responsive(lg){
+                justify-content: center;
+            }
+            @include responsive(xs){
+                gap:10px;
+                margin-bottom:20px;
+            }
             .step-item{
                 background-color:#fff;
                 flex: 0 0 calc((100% / 6) - 25px);
                 padding:15px;
                 border-radius:20px;
+                @include responsive(lg){
+                    flex: 0 0 calc((100% / 4) - 25px);
+                }
+                @include responsive(md){
+                    flex: 0 0 calc((100% / 3) - 25px);
+                }
+                @include responsive(sm){
+                    padding: 10px 5px;
+                    border-radius:10px;
+                }
+                @include responsive(xs){
+                    flex: 0 0 calc((100% / 3) - 10px);
+                }
                 .image-wrap{
                     img{
                         width:100%;
                         height:auto;
                         border-radius:20px;
+                        @include responsive(sm){
+                            border-radius:10px;
+                        }
                     }
                 }
                 .step-count{
@@ -44,22 +85,39 @@
                     text-align: center;
                     margin-top:5px;
                     font-weight: 500;
+                    @include responsive(sm){
+                        font-size: 12px;
+                    }
                 }
                 .step-name{
                     font-size: 26px;
                     font-weight:600;
                     text-align: center;
+                    @include responsive(xl){
+                        font-size: 22px;
+                    }
+                    @include responsive(sm){
+                        font-size: 14px;
+                    }
                 }
                 .step-description{
                     text-align: center;
                     font-size: 14px;
                     color:rgba(0,0,0,0.8);
                     margin-bottom:20px;
+                    @include responsive(sm){
+                        font-size: 12px;
+                        padding: 0 10px;
+
+                    }
                 }
             }
         }
         .button-wrap{
             text-align: center;
+            @include responsive(xs){
+                display: none;
+            }
             a{
                 font-weight:500;
                 color:#fff;

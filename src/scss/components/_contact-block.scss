@@ -10,6 +10,9 @@
         right:0;
         background:linear-gradient(142deg, rgba(248, 44, 44, 0.20) -21.46%, rgba(236, 135, 78, 0.20) 7.7%, rgba(231, 139, 32, 0.20) 29.92%, rgba(108, 61, 244, 0.20) 53.53%, rgba(255, 38, 51, 0.20) 81.3%, rgba(255, 24, 24, 0.20) 111.85%);
         filter: blur(82px);
+        @include responsive(sm){
+            filter: blur(150px);
+        }
         
     }
     &:before{
@@ -21,6 +24,9 @@
         left:0;
         background: linear-gradient(37deg, rgba(201, 209, 249, 0.69) 25.78%, rgba(243, 209, 246, 0.43) 42.11%, #4712B1 106.52%, rgba(223, 214, 241, 0.00) 126.95%);
         filter: blur(82px);
+        @include responsive(sm){
+            filter: blur(150px);
+        }
     }
     .inner{
         padding:60px 0px;
@@ -29,31 +35,95 @@
         max-width:1440px;
         position:relative;
         z-index:1;
+        @include responsive(xl){
+            padding: 60px 40px;
+            padding-bottom:100px;
+        }
+        @include responsive(xs){
+            padding: 20px;
+            padding-bottom:0px;
+        }
         .heading{
             text-align: center;
             font-size: 60px;
             font-style: normal;
             font-weight: 700;
             margin-bottom:70px;
+            @include responsive(lg){
+                font-size: 36px;
+                margin-bottom:30px;
+            }
+            @include responsive(xs){
+                padding: 0 50px;
+                line-height: 110%;
+            }
         }
         .inner-wrap{
             display:flex;
             align-items: center;
             justify-content: space-between;
+            @include responsive(lg){
+                flex-direction: column;
+                align-items: center;
+            }
             .form-block-wrapper{
                 flex: 0 0 30%;
                 align-self: flex-start;
+                @include responsive(lg){
+                    flex: 0 0 100%;
+                    width: 100%;
+                    margin-bottom: 25px;
+                }
                 .form-top{
                     text-align: center;
                     .form-heading{
                         font-size: 20px;
                         font-weight: 800;
                         margin-bottom:10px;
+                        @include responsive(xs){
+                            font-size: 15px;
+                        }
                     }
                     .form-description{
                         font-size: 16px;
                         font-weight: 400;
                         margin-bottom:20px;
+                        @include responsive(xs){
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .form-block{
+                    @include responsive(xs){
+                        padding: 20px 15px;
+                    }
+                    .form-header{
+                        @include responsive(xs){
+                            padding: 0 12px;
+                            gap: 10px;
+                        }
+                        .text-col{
+                            @include responsive(xs){
+                                font-size:12px;
+                                text-align: center;
+                                padding-right: 0;
+                                div{
+                                    display: inline;
+                                }
+                            }
+                        }                    
+                    }
+                    .form-container{
+                        .ginput_container input{
+                            padding: 15px 20px !important;
+                        }
+                    }
+                    .gform_footer{
+                        margin: 0;
+                        padding: 18px 0;
+                        input.gform_button{
+                            font-size: 12px;
+                        }
                     }
                 }
             }
@@ -62,6 +132,9 @@
                 display:flex;
                 align-items: center;
                 justify-content: center;
+                @include responsive(xs){
+                    margin-bottom: 22px;
+                }
                 .circle{
                     background-color:#F5EFFF;
                     width:60px;
@@ -76,17 +149,36 @@
             }
             .hubspot-embed{
                 flex: 0 0 60%;
+                @include responsive(lg){
+                    flex: 0 0 100%;
+                    width: 100%;
+                }
                 .form-top{
                     text-align: center;
                     .form-heading{
-                        font-size: 20px;
                         font-weight: 800;
                         margin-bottom:10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        grid-gap: 7px;
+                        svg{
+                            width: 44px;
+                        }
+                        @include responsive(xs){
+                            font-size: 15px;
+                            svg{
+                                width: 34px;
+                            }
+                        }
                     }
                     .form-description{
                         font-size: 16px;
                         font-weight: 400;
                         margin-bottom:20px;
+                        @include responsive(xs){
+                            font-size: 14px;
+                        }
                     }
                 }
                 .meetings-iframe-container{

@@ -7,7 +7,7 @@ $custom-breakpoints: (
     md: (minSize: 768px, maxSize: 991px, name: 'MD'),
     lg: (minSize: 992px, maxSize: 1279px, name: 'LG'),
     xl: (minSize: 1280px, maxSize: 1499px, name: 'XL'),
-    max: (minSize: 1500px, maxSize: 0px, name: 'MAX')
+    xxl: (minSize: 1500px, maxSize: 0px, name: 'XXL')
 ); 
 
 $poppins : 'Poppins', sans-serif;

@@ -14,6 +14,13 @@
         filter: blur(80px);
         transform:scale(1.5);
         animation: spin2 10s linear infinite;
+        @include responsive(xs){
+            width: 200px;
+            height: 700px;
+            top: 20%;
+            filter: blur(80px);
+            right: -10%;
+        }
     }
     &:before{
         content:"";
@@ -28,6 +35,14 @@
         right:-50%;
         transform:translateX(-50%) scale(1.7) rotate(200deg);
         animation: spin 15s linear infinite;
+        @include responsive(xs){
+            width: 200px;
+            height: 800px;
+            position: absolute;
+            top: 20%;
+            filter: blur(80px);
+            right: -10%;
+        }
     }
     .inner{
         max-width:1240px;
@@ -71,6 +86,8 @@
                 }
                 @include responsive(xs){
                     font-size:30px;
+                    letter-spacing: -2px;
+                    margin-bottom: 10px;
                 }
                 span{
                     font-style:italic;
@@ -87,6 +104,10 @@
                 @include responsive(md){
                     font-size:16px;
                     text-align: center;
+                }
+                @include responsive(xs){
+                    font-size:12px;
+                    margin-bottom: 24px;
                 }
             }
             .button-group{
@@ -113,6 +134,39 @@
             }
             @include responsive(md){
                 flex: 0 0 100%;
+            }
+            .form-block{
+                @include responsive(xs){
+                    padding: 20px 15px;
+                }
+                .form-header{
+                    @include responsive(xs){
+                        padding: 0 12px;
+                        gap: 10px;
+                    }
+                    .text-col{
+                        @include responsive(xs){
+                            font-size:12px;
+                            text-align: center;
+                            padding-right: 0;
+                            div{
+                                display: inline;
+                            }
+                        }
+                    }                    
+                }
+                .form-container{
+                    .ginput_container input{
+                        padding: 15px 20px !important;
+                    }
+                }
+                .gform_footer{
+                    margin: 0;
+                    padding: 18px 0;
+                    input.gform_button{
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }

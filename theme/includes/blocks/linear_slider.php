@@ -33,5 +33,31 @@ jQuery('.slider-linear-<?php echo $slider_id; ?>').slick({
     speed:2500,
     pauseOnHover:false,
     pauseOnFocus:false,
+    responsive: [
+        {
+            breakpoint: 1280,
+            settings: {
+                slidesToShow: 4,
+            }
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                dots: true,
+                speed: 700,
+                autoplay:false,
+                slidesToShow: 2.1,
+                slidesToScroll: 1,
+                cssEase:'ease',
+                infinite: false,
+            }
+            }
+        ]
 });
 </script>

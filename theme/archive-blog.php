@@ -2,6 +2,7 @@
 
 <div class="blog-template">
     <div class="inner">
+        <a href="/home" class="back-to-home">&#60; Back to home</a>
         <div class="heading">Blogs</div>
         <div class="description">"Unlocking the World of Trade and Code. Stay Ahead with Our Insights. Explore our blog for expert perspectives, cutting-edge trends, and valuable resources in the realms of trading strategies, coding techniques, and technology innovations.</div>
         <div class="blogs-wrap">

@@ -45,4 +45,47 @@
             jQuery(this).find('.broker-body').slideDown();
         }
     })
+
+    $(".brokers-wrap").slick({
+        dots: true,
+        arrows: false,
+        responsive: [
+            {
+            breakpoint: 9999,
+            settings: "unslick"
+            },
+            {
+            breakpoint: 1280,
+            settings: {
+                slidesToShow: 3.5,
+                slidesToScroll: 1,
+                infinite: false,
+            }
+            },
+            {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2.5,
+                slidesToScroll: 1,
+                infinite: false,
+            }
+            },
+            {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1.8,
+                slidesToScroll: 1,
+                infinite: false,
+            }
+            },
+            {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1.4,
+                slidesToScroll: 1,
+                infinite: false,
+            }
+            }
+        ]
+    })
 </script>

@@ -31,6 +31,17 @@
         margin:0 auto;
         position:relative;
         z-index:1;
+        @include responsive(lg){
+            padding: 60px 40px;
+            padding-bottom:150px;
+        }
+        @include responsive(sm){
+            padding-bottom:70px;
+        }
+        @include responsive(xs){
+            padding:40px 20px;
+            padding-bottom:70px;
+        }
         .heading{
             text-align: center;
             color:#fff;
@@ -38,11 +49,22 @@
             font-weight: 500;
             line-height: 100%;
             margin-bottom:70px;
+            @include responsive(sm){
+                font-size: 16px;
+                margin-bottom:35px;
+            }
         }
         .links{
             display:flex;
             align-items: center;
             gap:40px;
+            @include responsive(lg){
+                flex-direction: column;
+                justify-content: center;
+            }
+            @include responsive(sm){
+                gap:32px;
+            }
             .link-item{
                 flex:1;
                 border-radius: 20px;
@@ -53,6 +75,10 @@
                 justify-content: center;
                 gap:20px;
                 padding:20px 0px;
+                @include responsive(lg){
+                    padding:20px;
+                    width: 100%;
+                }
                 .icon{
                     background-color:#fff;
                     width:60px;
@@ -61,12 +87,20 @@
                     align-items: center;
                     justify-content: center;
                     border-radius:50%;
+                    @include responsive(sm){
+                        width:42px;
+                        height:42px;
+                    }
                 }
                 a{
-                    font-size: 30px;
                     color:#fff;
                     font-weight: 500;
+                    font-size: 30px;
                     letter-spacing: 6px;
+                    @include responsive(sm){
+                        font-size: 16px;
+                        letter-spacing: 3px;
+                    }
                 }
             }
         }
