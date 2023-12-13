@@ -19,7 +19,14 @@
             <div class="menu-wrap">
                 <?php foreach($menu as $menu_col){?>
                     <div class="menu-col">
-                        <div class="column-name"><?php echo $menu_col['column_name']; ?></div>
+                        <div class="column-name">
+                            <?php echo $menu_col['column_name']; ?>
+                            <div class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                    <path d="M20 8.73047L12 16.7305L4 8.73047" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
                         <div class="menu-inner">
                             <?php foreach($menu_col['items'] as $menu_item){?>
                                 <div class="menu-item">
@@ -30,7 +37,14 @@
                     </div>
                 <?php }?>
                 <div class="menu-col contact">
-                    <div class="column-name">Contact me</div>
+                    <div class="column-name">
+                        Contact me
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                <path d="M20 8.73047L12 16.7305L4 8.73047" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
                     <div class="menu-inner">
                         <?php if($email){?>
                             <div class="menu-item">
@@ -52,8 +66,7 @@
                                 </a>
                             </div>
                         <?php }?>
-                        <div class="menu-col">
-                            <div class="column-name mob">Legal</div>
+                        <div class="menu-col legal">
                             <div class="menu-inner legal">
                                 <?php foreach($bottom_menu as $menu_item){?>
                                     <div class="menu-item">
@@ -64,13 +77,50 @@
                         </div>
                     </div>
                 </div>
+                <div class="menu-col mobile-legal">
+                    <div class="column-name">
+                        Legal
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                <path d="M20 8.73047L12 16.7305L4 8.73047" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="menu-inner legal">
+                        <?php foreach($bottom_menu as $menu_item){?>
+                            <div class="menu-item">
+                                <a href="<?php echo $menu_item['link']['url']; ?>" target="<?php echo $menu_item['link']['target']; ?>"><?php echo $menu_item['link']['title']; ?></a>
+                            </div>
+                        <?php }?>
+                    </div>
+                </div>
             </div>
             <div class="copyright-text">
                 Copyright © <?php echo Date('Y');?> All Rights Reserved.
             </div>
         </div>
     </div>
-       
+    <script>
+
+        const mediaQuery = '(max-width: 767px)';
+        const mediaQueryList = window.matchMedia(mediaQuery);
+        if(mediaQueryList.matches){
+            jQuery('.column-name').click(function(){
+                jQuery(this).toggleClass('active');
+                jQuery(this).next().slideToggle();
+             });
+        }
+        mediaQueryList.addEventListener('change', event => {
+        if (event.matches) {
+            jQuery('.column-name').click(function(){
+                jQuery(this).toggleClass('active');
+                jQuery(this).next().slideToggle();
+             });
+        } else {
+            jQuery('.column-name').unbind('click');
+        }
+        })
+    </script>   
     
     </div><!-- closing all div -->
     <?php wp_footer(); ?>

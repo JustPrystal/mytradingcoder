@@ -12,7 +12,16 @@
             padding:60px 40px 20px 40px;
             gap:40px;
         }
+        @include responsive(md){
+            flex-wrap:wrap;
+        }
+        @include responsive(sm){
+            padding:40px 20px 20px 20px;
+        }
         .logo-container{
+            @include responsive(xs){
+                flex: 0 0 100%;
+            }
             .logo-wrap{
                 margin-bottom:20px;
             }
@@ -35,17 +44,49 @@
                 flex: 0 0 55%;
                 gap:50px;
             }
+            @include responsive(md){
+                flex: 0 0 100%;
+                justify-content: flex-start;
+            }
+            @include responsive(sm){
+                flex-direction:column;
+                gap:15px;   
+            }
             .menu-col{
+                @include responsive(sm){
+                    border-bottom:1px solid rgba(255,255,255,0.08);
+                    width:100%;
+                }
+                &.mobile-legal{
+                    display:none;
+                    @include responsive(md){
+                        display:block;
+                    }
+                }
                 .column-name{
                     color:#fff;
                     font-size: 18px;
                     font-weight: 600;
                     margin-bottom:15px;
-                    &.mob{
+                    @include responsive(sm){
+                        display:flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    .arrow{
                         display:none;
+                        @include responsive(sm){
+                            display:block;
+                        }
                     }
                 }
                 .menu-inner{
+                    @media(min-width:767px){
+                        display:block !important;
+                    }
+                    @include responsive(sm){
+                        display:none;
+                    }
                     .menu-item{
                         margin-bottom:12px;
                         a{
@@ -55,6 +96,10 @@
                             gap:10px;
                             color:rgba(255,255,255,0.5);
                             transition:all .3s ease;
+                            @include responsive(sm){
+                                gap:5px;
+                                font-size:14px;
+                            }   
                             &:hover{
                                 color:rgba(255,255,255,0.8);
                                 svg{
@@ -72,10 +117,28 @@
                         border-top:1px solid rgba(255,255,255,0.08);
                         margin-top:48px;
                         padding-top:24px;
+                        @include responsive(md){
+                            border:0;
+                            margin:0;
+                            padding:0;
+                            flex-direction:column;
+                            gap:unset!important;
+                        }
                     }
+
                 }
                 &.contact{
-                    flex:1
+                    flex:1;
+                    @include responsive(md){
+                        flex:unset;
+                    }
+                    .menu-inner{
+                        .legal{
+                            @include responsive(md){
+                                display:none;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -87,6 +150,14 @@
             color:rgba(255,255,255,0.5);
             @include responsive(lg){
                 left:40px;
+            }
+            @include responsive(md){
+                position:static;
+            }
+            @include responsive(sm){
+                font-size: 12px;
+                text-align: center;
+                width:100%;
             }
         }
     }
