@@ -29,6 +29,14 @@
         margin:0 auto;
         max-width:1240px;
         z-index:1;
+        @include responsive(lg){
+            max-width:100%;
+            padding:40px;
+        }
+        @include responsive(lg){
+            padding:30px 20px;
+            padding-bottom:50px;
+        }
         .breadcrumbs{
             margin-bottom:30px;
             .breadcrumb-item{
@@ -36,6 +44,9 @@
                 color:$purple;
                 font-weight: 500;
                 line-height:1;
+                @include responsive(sm){
+                    font-size:16px; 
+                }
                 &.active{
                     color:rgba(255, 255, 255, 0.40);
                 }
@@ -48,6 +59,9 @@
             font-weight:500;
             letter-spacing: 4px;
             margin-bottom:30px;
+            @include responsive(sm){
+                margin-bottom:15px;
+            }
         }
         .heading{
             color:#fff;
@@ -56,18 +70,35 @@
             font-weight: 700;
             line-height: 130%;
             margin-bottom:70px;
+            @include responsive(sm){
+                font-size:36px;
+                margin-bottom:20px;
+            }
         }
         .reviews-wrap{
             display:flex;
             flex-wrap:wrap;
             margin-bottom:70px;
             gap:20px;
+            @include responsive(md){
+                display:flex;
+                flex-wrap:wrap;
+            }
+            @include responsive(sm){
+                margin-bottom:30px;    
+            }
             .review-item{
                 flex: 0 0 calc(33.3% - 13.33px);
                 background-color: #1A202C;
                 color:#fff;
                 padding:30px;
                 border-radius:20px;
+                @include responsive(md){
+                    flex: 0 0 calc(50% - 10px);
+                }
+                @include responsive(sm){
+                    flex: 0 0 100%;
+                }
                 .review-top{
                     font-family:$inter;
                     padding-bottom:30px;
@@ -141,6 +172,9 @@
                 position:relative;
                 border-radius:30px;
                 transition:background-color .3s ease;
+                @include responsive(sm){
+                    width:100%;   
+                }
                 &:hover{
                     background-color:$purplehover;
                 }

@@ -10,7 +10,7 @@
         <div class="heading">What clients say about me</div>
         <div class="reviews-wrap">
             <?php 
-                $posts_per_page = 3;
+                $posts_per_page = 6;
                 $args = [
                     'post_type' => 'reviews',
                     'orderby'   => 'date',

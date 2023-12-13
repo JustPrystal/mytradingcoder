@@ -7,6 +7,11 @@
         margin:0 auto;
         display:flex;
         justify-content: space-between;
+        @include responsive(lg){
+            max-width:100%;
+            padding:60px 40px 20px 40px;
+            gap:40px;
+        }
         .logo-container{
             .logo-wrap{
                 margin-bottom:20px;
@@ -26,6 +31,10 @@
             align-items: flex-start;
             justify-content: flex-end;
             gap:100px;
+            @include responsive(lg){
+                flex: 0 0 55%;
+                gap:50px;
+            }
             .menu-col{
                 .column-name{
                     color:#fff;
@@ -76,6 +85,9 @@
             font-family:$inter;
             left:0;
             color:rgba(255,255,255,0.5);
+            @include responsive(lg){
+                left:40px;
+            }
         }
     }
 }
