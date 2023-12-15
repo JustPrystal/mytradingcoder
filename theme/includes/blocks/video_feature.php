@@ -27,14 +27,14 @@
                 </ul>
             </div>
             <div class="right-col">
-                <div class="video-container">
+                <div class="video-container" id="hire-me-video-container">
                     <picture class="video-thumbnail">
                         <source srcset="<?php echo $video_thumbnail_mobile?>" media="(max-width: 567px)"/>
                         <img src="<?php echo $video_thumbnail?>" alt="" >
                     </picture>
-                    <video controls>
-                        <source src="<?php echo $video_mobile?>" media="(max-width: 567px)"/>
-                        <source src="<?php echo $video?>"/>
+                    <video id="hire-me-video"  controls>
+                        <source src="<?php echo $video?>" media="(min-width: 568px)"/>
+                        <source src="<?php echo $video_mobile?>"/>
                     </video>
                 </div>
                 <div class="button-group">

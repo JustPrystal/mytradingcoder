@@ -30,7 +30,7 @@ jQuery('.slider-linear-<?php echo $slider_id; ?>').slick({
     autoplay:true,
     infinite:true,
     autoplaySpeed:0,
-    speed:2500,
+    speed:5000,
     pauseOnHover:false,
     pauseOnFocus:false,
     responsive: [

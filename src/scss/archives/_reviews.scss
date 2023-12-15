@@ -92,7 +92,11 @@
                 background-color: #1A202C;
                 color:#fff;
                 padding:30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 border-radius:20px;
+                height: auto;
                 @include responsive(md){
                     flex: 0 0 calc(50% - 10px);
                 }
@@ -103,8 +107,6 @@
                     font-family:$inter;
                     padding-bottom:30px;
                     padding-right:20px;
-                    margin-bottom:10px;
-                    border-bottom: 1px solid rgba(145, 164, 191, 0.2);
                     .title{
                         font-size: 18px;
                         font-weight: 600;
@@ -115,12 +117,32 @@
                         font-weight:400;
                         color:#F3F5F7;
                         line-height: 150%;
+                        &.ellipsis{
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 4;
+                            -webkit-box-orient: vertical; 
+                        }
+                    }
+                    .read-more{
+                        display: none;
+                        text-decoration: underline;
+                        cursor: pointer;
+                        @include responsive(xs){
+                            font-size: 12px;
+                        }
+                        &:hover{
+                            transition: 200ms ease;
+                            color: #8859D7;                            
+                        }
                     }
                 }
                 .review-bottom{
                     display:flex;
                     justify-content: space-between;
                     align-items: flex-end;
+                    padding-top: 10px;
+                    border-top: 1px solid rgba(145, 164, 191, 0.2);
                     .client-details{
                         .stars{
                             margin-bottom:5px;
