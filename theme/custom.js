@@ -30,7 +30,10 @@ $(document).ready(function(){
       if (this.hash !== "") {
         // Prevent default anchor click behavior
         event.preventDefault();
-        
+        if($(this).parents('.mobile-menu').length > 0){
+          $('.mobile-menu').removeClass('active');
+          $('.header').removeClass('menu-open');
+        }
         var hash = this.hash;
         
         $('html, body').animate({
