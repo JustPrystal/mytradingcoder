@@ -105,11 +105,11 @@
                         cursor:pointer;
                         transition:all .3s ease;
                         &:hover, &.active{
-                            background-color:$purple;
-                            color:#fff;
+                            // background-color:$purple;
+                            // color:#fff;
                             svg{
                                 *{
-                                    stroke:#fff !important;
+                                    // stroke:#fff !important;
                                 }
                             }
                         }
@@ -151,6 +151,9 @@
                         .broker-body{
                             display:none;
                             text-align: left;
+                            padding: 15px;
+                            border-radius: 20px;
+                            background-color: white;
                         }
                         &.active{
                             svg{

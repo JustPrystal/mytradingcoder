@@ -105,7 +105,8 @@
                         "animation6": "Animation 6",
                         "animation7": "Animation 7",
                         "animation8": "Animation 8",
-                        "animation9": "Animation 9"
+                        "animation9": "Animation 9",
+                        "animation10": "Animation 10"
                     },
                     "default_value": [],
                     "allow_null": 0,
@@ -154,5 +155,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1702678457
+    "modified": 1702701632
 }

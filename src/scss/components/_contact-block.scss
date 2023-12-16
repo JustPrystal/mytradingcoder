@@ -157,13 +157,22 @@
                     text-align: center;
                     .form-heading{
                         font-weight: 800;
-                        margin-bottom:10px;
+                        margin-bottom: -18px;
                         display: flex;
                         justify-content: center;
-                        align-items: center;
+                        // align-items: center;
                         grid-gap: 7px;
+                        font-size: 20px;
                         svg{
                             width: 44px;
+                            transform: translateY(-18px);
+                        }
+                        @include responsive(lg){
+                            align-items: center;
+                            margin-bottom: 0px;
+                            svg{
+                                transform: translateY(0px);
+                            }
                         }
                         @include responsive(xs){
                             font-size: 15px;

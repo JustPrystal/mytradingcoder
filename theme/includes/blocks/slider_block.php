@@ -1,4 +1,4 @@
-<div class="slider-block">
+<div class="slider-block" id="services">
     <div class="inner">
         <div class="heading"><?php echo $block['heading'];?></div>
         <div class="description"><?php echo $block['description'];?></div>

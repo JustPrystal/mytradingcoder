@@ -22,7 +22,12 @@
                 </div>
                 <ul class="accomplishments">
                     <?php foreach($block['accomplishments']['line_items'] as $item){?>
-                        <li><?php echo $item['item']; ?></li>
+                        <li>
+                            <?php echo $item['item']; 
+                            if ($item['image']){?> 
+                            <img src="<?php echo $item['image']['url']; ?>" alt="">
+                            <?php } ?>
+                        </li>
                     <?php }?>
                 </ul>
             </div>
