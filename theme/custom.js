@@ -27,30 +27,25 @@ $(document).ready(function(){
 
     // links scroll
     $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+        
+        var hash = this.hash;
+        
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 50);
 
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
-          
-          var hash = this.hash;
-    
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 50, function(){
-    
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        }
-      });
+        window.location.hash = hash;
+      }
+    });
 })
 var videoContainer = document.getElementById('hire-me-video-container');
 var video = document.getElementById('hire-me-video');
 if (video){
     var notLoaded = setInterval(() => {
-        console.log("not ready")
         if ( video.readyState === 4 ){
-            console.log("loaded")
             videoContainer.style.display = 'block';
             clearInterval(notLoaded)
         }

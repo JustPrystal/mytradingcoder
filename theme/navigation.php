@@ -109,15 +109,17 @@
         smoothScroll(target);
     });
     jQuery('.mobile-menu .menu-item a').click(function(e){
-        e.preventDefault();
-        if(window.location.href != window.location.origin+'/'){
-           window.location.href = jQuery(this).attr('href');
-           return;
+        if(this.hash){
+            e.preventDefault();
+            if(window.location.href != window.location.origin+'/'){
+            window.location.href = jQuery(this).attr('href');
+            return;
+            }
+            jQuery('.mobile-menu').removeClass('active');
+            jQuery('.header').removeClass('menu-open');
+            var href = jQuery(this).attr('href');
+            var target = href.replace(window.location.origin+'/', '');
+            smoothScroll(target);
         }
-        jQuery('.mobile-menu').removeClass('active');
-        jQuery('.header').removeClass('menu-open');
-        var href = jQuery(this).attr('href');
-        var target = href.replace(window.location.origin+'/', '');
-        smoothScroll(target);
     })
 </script>
