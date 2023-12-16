@@ -23,6 +23,26 @@ $(document).ready(function(){
         }
     }
     countLines()
+
+
+    // links scroll
+    $("a").on('click', function(event) {
+
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+          
+          var hash = this.hash;
+    
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+    
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        }
+      });
 })
 var videoContainer = document.getElementById('hire-me-video-container');
 var video = document.getElementById('hire-me-video');

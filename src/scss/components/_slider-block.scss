@@ -89,12 +89,46 @@
                 flex : 0 0 auto;
                 width:calc(20% - 24px);
                 .image-wrap{
+                    overflow: hidden;
+                    margin-bottom: 15px;
+                    aspect-ratio: 149/121;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius:20px;
                     img{
-                        width:100%;
-                        aspect-ratio: 149/121;
+                        // width:100%;
                         margin-bottom:20px;
-                        border-radius:20px;
+                        height: 100%;
+                        // aspect-ratio: 149/121;
                         object-fit: cover;
+                        &.animation1{
+                            animation: animation1 ease-in-out 2000ms infinite forwards alternate;
+                        }
+                        &.animation2{
+                            animation: animation2 ease-in-out 3000ms infinite forwards alternate;
+                        }
+                        &.animation3{
+                            animation: animation3 ease-in-out 5000ms infinite forwards alternate;
+                        }
+                        &.animation4{
+                            animation: animation4 ease-in-out 6000ms infinite forwards alternate;
+                        }
+                        &.animation5{
+                            animation: animation5 ease-in-out 6000ms infinite forwards alternate;
+                        }
+                        &.animation6{
+                            animation: animation6 ease-in-out 6000ms infinite forwards alternate;
+                        }
+                        &.animation7{
+                            animation: animation7 ease-in-out 6000ms infinite forwards alternate;
+                        }
+                        &.animation8{
+                            animation: animation8 ease-in-out 6000ms infinite forwards alternate;
+                        }
+                        &.animation9{
+                            animation: animation9 ease-in-out 6000ms infinite forwards alternate;
+                        }
                     }
                 }
                 .slide-description{

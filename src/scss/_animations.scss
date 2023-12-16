@@ -1,0 +1,91 @@
+@keyframes animation1 { //scale
+    to{
+        scale: 1.5;
+    }
+    from{
+        scale: 1.2;
+    }
+}
+@keyframes animation2 { //translateX and scale
+    to{
+        transform: translateX(-8%);
+        scale: 1.2;
+    }
+    from{
+        transform: translateX(5%);
+        scale: 1.1;
+    }
+}
+@keyframes animation3 { //low and high
+    to{
+        transform: translateX(-8%) translateY(16%);
+        scale: 2;
+    }
+    from{
+        transform: translateX(25%) translateY(-10%) ;
+        scale: 2;
+    }
+}
+@keyframes animation4 { //zoom in first tab
+    to{
+        transform: translateX(44%) translateY(31%);
+        scale: 7;
+    }
+    from{
+        transform: translateX(0) translateY(0) ;
+        scale: 1.2;
+    }
+}
+@keyframes animation5 { 
+    to{
+        transform: translateX(28%) translateY(31%);
+        scale: 7;
+    }
+    from{
+        transform: translateX(0) translateY(0) ;
+        scale: 1.2;
+    }
+}
+@keyframes animation6 { 
+    to{
+        transform: translateX(13%) translateY(31%);
+        scale: 7;
+    }
+    from{
+        transform: translateX(0) translateY(0) ;
+        scale: 1.2;
+    }
+}
+@keyframes animation7 { 
+    to{
+        transform: translateX(-15%) translateY(31%);
+        scale: 7;
+    }
+    from{
+        transform: translateX(0) translateY(0) ;
+        scale: 1.2;
+    }
+}
+@keyframes animation8 { 
+    to{
+        transform: translateX(-29%) translateY(31%);
+        scale: 7;
+    }
+    from{
+        transform: translateX(0) translateY(0) ;
+        scale: 1.2;
+    }
+}
+@keyframes animation9 { 
+    0%{
+        transform: translateX(31%) translateY(0%);
+        scale: 1.7;
+    }
+    50%{
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateX(0) translateY(0) ;
+        scale: 1.5;
+    }
+}

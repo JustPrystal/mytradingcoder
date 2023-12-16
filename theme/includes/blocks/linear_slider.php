@@ -10,7 +10,7 @@
                 ?>
                 <div class="slide-item ">
                     <div class="image-wrap">
-                        <img src="<?php echo $slide['image']['url']?>" alt="">
+                        <img class="<?php echo $slide['animation_type']; ?>" src="<?php echo $slide['image']['url']?>" alt="">
                     </div>
                     <div class="slide-description">
                         <?php echo $slide['description']; ?>

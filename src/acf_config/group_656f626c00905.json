@@ -84,6 +84,38 @@
                     "mime_types": ""
                 },
                 {
+                    "key": "field_657cc23590e00",
+                    "label": "Animation Type",
+                    "name": "animation_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "animation1": "Animation 1",
+                        "animation2": "Animation 2",
+                        "animation3": "Animation 3",
+                        "animation4": "Animation 4",
+                        "animation5": "Animation 5",
+                        "animation6": "Animation 6",
+                        "animation7": "Animation 7",
+                        "animation8": "Animation 8",
+                        "animation9": "Animation 9"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
                     "key": "field_656f629c923df",
                     "label": "Description",
                     "name": "description",
@@ -122,5 +154,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1701803069
+    "modified": 1702678457
 }
