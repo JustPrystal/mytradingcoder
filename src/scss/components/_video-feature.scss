@@ -133,7 +133,7 @@
                 }
                 .accomplishments{
                     padding-left:20px;
-                    padding-right:20px;
+                    padding-right:40px;
                     li{
                         margin-bottom:50px;
                         position:relative;
@@ -178,7 +178,7 @@
                         }
                         img{
                             position: absolute;
-                            right: -18px;
+                            right: -40px;
                             top: -10px;
                         }
                     }
@@ -188,9 +188,10 @@
                 flex: 0 0 50%;
                 @include responsive (md){
                     flex: 0 0 100%;
+                    width:100%;
                 }
                 .video-container{
-                    display: none;
+                    // display: none;
                     margin-bottom:30px;
                     position: relative;
                     border-radius:25px;
@@ -214,6 +215,10 @@
                     video{
                         width:100%;
                         height:auto;
+                        @include responsive (xs){
+                            width: 100%;
+                            aspect-ratio: 9/16;
+                        }
                     }
                 }
                 .button-group{
@@ -237,4 +242,22 @@
             }
         }
     }
+}
+
+//safari play button stuff
+*::-webkit-media-controls-panel {
+    display: none!important;
+    -webkit-appearance: none;
+  }
+  
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+display: none!important;
+-webkit-appearance: none;
+}
+
+*::-webkit-media-controls-start-playback-button {
+display: none!important;
+-webkit-appearance: none;
 }

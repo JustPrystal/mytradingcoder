@@ -23,6 +23,10 @@
             margin: 0 20px;
         }
         .description{
+            @include responsive(xs){
+                max-height:600px;
+                overflow:auto;
+            }
             p{
                 &:first-child{
                     margin-top: 0;
@@ -136,6 +140,7 @@
                         color:#F3F5F7;
                         line-height: 150%;
                         overflow: hidden;
+                        max-height:96px;
                         display: -webkit-box;
                         -webkit-line-clamp: 4;
                         -webkit-box-orient: vertical; 

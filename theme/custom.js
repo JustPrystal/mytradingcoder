@@ -45,16 +45,16 @@ $(document).ready(function(){
       }
     });
 })
-var videoContainer = document.getElementById('hire-me-video-container');
-var video = document.getElementById('hire-me-video');
-if (video){
-    var notLoaded = setInterval(() => {
-        if ( video.readyState === 4 ){
-            videoContainer.style.display = 'block';
-            clearInterval(notLoaded)
-        }
-    }, 1);
-}
+// var videoContainer = document.getElementById('hire-me-video-container');
+// var video = document.getElementById('hire-me-video');
+// if (video){
+//     var notLoaded = setInterval(() => {
+//         if ( video.readyState === 4 ){
+//             videoContainer.style.display = 'block';
+//             clearInterval(notLoaded)
+//         }
+//     }, 1);
+// }
 
 jQuery(document.body).on('click', '.read-more', function(){
     let review = $(this).parent().closest(".review-item");

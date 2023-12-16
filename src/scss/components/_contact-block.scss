@@ -93,39 +93,6 @@
                         }
                     }
                 }
-                .form-block{
-                    @include responsive(xs){
-                        padding: 20px 15px;
-                    }
-                    .form-header{
-                        @include responsive(xs){
-                            padding: 0 12px;
-                            gap: 10px;
-                        }
-                        .text-col{
-                            @include responsive(xs){
-                                font-size:12px;
-                                text-align: center;
-                                padding-right: 0;
-                                div{
-                                    display: inline;
-                                }
-                            }
-                        }                    
-                    }
-                    .form-container{
-                        .ginput_container input{
-                            padding: 15px 20px !important;
-                        }
-                    }
-                    .gform_footer{
-                        margin: 0;
-                        padding: 18px 0;
-                        input.gform_button{
-                            font-size: 12px;
-                        }
-                    }
-                }
             }
             .or{
                 flex:1;

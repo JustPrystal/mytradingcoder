@@ -418,7 +418,7 @@
         "discussion",
         "comments"
     ],
-    "active": 1,
+    "active": true,
     "description": "Block Chooser for all content types that will have blocks.",
-    "modified": 1702202856
+    "modified": 1702741190
 }

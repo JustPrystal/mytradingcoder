@@ -118,8 +118,8 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "min": "",
+            "default_value": 5,
+            "min": 1,
             "max": 5,
             "step": "",
             "prepend": "",
@@ -141,7 +141,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1702657760
+    "modified": 1702741189
 }

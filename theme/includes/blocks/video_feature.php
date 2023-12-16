@@ -33,13 +33,12 @@
             </div>
             <div class="right-col">
                 <div class="video-container" id="hire-me-video-container">
-                    <picture class="video-thumbnail">
-                        <source srcset="<?php echo $video_thumbnail_mobile?>" media="(max-width: 567px)"/>
-                        <img src="<?php echo $video_thumbnail?>" alt="" >
-                    </picture>
-                    <video id="hire-me-video"  controls>
-                        <source src="<?php echo $video?>" media="(min-width: 568px)"/>
-                        <source src="<?php echo $video_mobile?>"/>
+                    <div class="video-thumbnail">
+                        <img src="<?php echo $video_thumbnail?>" class="desktop" alt="" >
+                        <img src="<?php echo $video_thumbnail_mobile?>" class="mobile" alt="" >
+                    </div>
+                    <video id="hire-me-video" controls>
+                        <source src="<?php echo $video?>" />
                     </video>
                 </div>
                 <div class="button-group">
@@ -49,3 +48,26 @@
         </div>
     </div>
 </div>
+<script>
+    var mobile_video = "<?php echo $video_mobile; ?>";
+    var video = "<?php echo $video; ?>";
+
+    jQuery(document).ready(function(){
+        if (window.innerWidth < 568){
+            jQuery('#hire-me-video-container video').attr('src', mobile_video).change();
+        } else {
+            jQuery('#hire-me-video-container video').attr('src', video).change();
+        }
+    });
+
+    //on document resize swap out the video
+    jQuery(window).resize(function(){
+        if (window.innerWidth < 568){
+            jQuery('#hire-me-video-container .video-thumbnail').show(0);
+            jQuery('#hire-me-video-container video').attr('src', mobile_video).change();
+        } else {
+            jQuery('#hire-me-video-container .video-thumbnail').show(0);
+            jQuery('#hire-me-video-container video').attr('src', video).change();
+        }
+    });
+</script>
