@@ -2,11 +2,17 @@
     position:relative;
     overflow:hidden;
     &:before{
+       @media(min-width:568px){
         content:"";
         position:absolute;
-        inset:0;
+        top:0;
+        left:0;
+        pointer-events: none;
+        bottom:0;
+        right:0;
         background: linear-gradient(59deg, rgba(177, 147, 236, 0.60) 21.74%, rgba(201, 209, 249, 0.42) 50.01%, rgba(243, 209, 246, 0.26) 73.97%, rgba(223, 214, 241, 0.00) 113.75%);
         filter: blur(82px);
+       }
     }
     .inner{
         position:relative;
