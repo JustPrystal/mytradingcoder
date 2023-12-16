@@ -10,9 +10,10 @@ $(document).ready(function(){
         for (let i = 0; i < $(".review-item").length; i++) {
             let readMore = $(".review-item").eq(i).find(".read-more");
             let container = $(".review-item").eq(i).find(".description");
-            let containerHeight = parseInt(container.height());
-            let lineHeight = parseInt(container.css("line-height"));
+            let containerHeight = parseFloat(container.height());
+            let lineHeight = parseFloat(container.css("line-height"));
             let lines = containerHeight / lineHeight
+            console.log(i, lines)
             if (lines > 4){
                 container.addClass("ellipsis")
                 readMore.css("display", "block")
@@ -22,7 +23,7 @@ $(document).ready(function(){
             }
         }
     }
-    countLines()
+    // countLines()
 
 
     // links scroll
@@ -68,19 +69,7 @@ $(".close-popup").click(function(){
 })
 const showDialog = () => {
     $('.review-popup').addClass('show')
-    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-    const body = document.body;
-    body.style.position = 'fixed';
-    body.style.top = `-${scrollY}`;
   };
   const closeDialog = () => {
-    const body = document.body;
-    const scrollY = body.style.top;
-    body.style.position = '';
-    body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
     $('.review-popup').removeClass('show');
   }
-  window.addEventListener('scroll', () => {
-    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-  });

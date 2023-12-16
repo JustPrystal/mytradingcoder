@@ -117,15 +117,18 @@
                         font-weight:400;
                         color:#F3F5F7;
                         line-height: 150%;
-                        &.ellipsis{
-                            overflow: hidden;
-                            display: -webkit-box;
-                            -webkit-line-clamp: 4;
-                            -webkit-box-orient: vertical; 
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical; 
+                        p{
+                            margin: 0;
+                        }
+                        @include responsive(xs){
+                            font-size: 12px;
                         }
                     }
                     .read-more{
-                        display: none;
                         text-decoration: underline;
                         cursor: pointer;
                         @include responsive(xs){

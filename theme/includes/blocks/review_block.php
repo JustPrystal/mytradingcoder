@@ -26,7 +26,7 @@
                             <div class="review-top">
                                 <div class="title"><?php echo $review->post_title; ?></div>
                                 <div class="description"><?php echo $description; ?></div>
-                                <div class="read-more">Read More</div>
+                                <div class="read-more">Expand</div>
                             </div>
                             <div class="review-bottom">
                                 <div class="client-details">

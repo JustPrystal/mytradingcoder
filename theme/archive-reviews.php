@@ -37,7 +37,7 @@
                             <div class="review-top">
                                 <div class="title"><?php echo $review->post_title; ?></div>
                                 <div class="description"><?php echo $description; ?></div>
-                                <div class="read-more">Read More</div>
+                                <div class="read-more">Expand</div>
                             </div>
                             <div class="review-bottom">
                                 <div class="client-details">
@@ -99,20 +99,6 @@
                     if(response.data.type == 'success'){
                         jQuery('.reviews-template .reviews-wrap').append(response.data.posts);
                         pageCount = pageCount + 1;
-                        for (let i = 0; i < $(".review-item").length; i++) {
-                            let readMore = $(".review-item").eq(i).find(".read-more");
-                            let container = $(".review-item").eq(i).find(".description");
-                            let containerHeight = parseInt(container.height());
-                            let lineHeight = parseInt(container.css("line-height"));
-                            let lines = containerHeight / lineHeight
-                            if (lines > 4){
-                                container.addClass("ellipsis")
-                                readMore.css("display", "block")
-                            } else {
-                                container.removeClass("ellipsis")
-                                readMore.css("display", "none")
-                            }
-                        }
                         that.removeClass('loading').prop("disabled", false);
                         that.data('page', pageCount);
                         if(pageCount == max){
