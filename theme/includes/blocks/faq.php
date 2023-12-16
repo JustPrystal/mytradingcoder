@@ -30,7 +30,6 @@
             jQuery(this).find('.faq-body').slideUp(400, function(){
                 that.removeClass('active');
             });
-            
         }else{
             jQuery('.faq-wrap .faq-item').removeClass('active');
             jQuery('.faq-wrap .faq-item .faq-body').slideUp();

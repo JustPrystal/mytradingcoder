@@ -93,9 +93,14 @@
 
     //write a function that lets you smooth scroll to any element on the page
     function smoothScroll(target){
-        jQuery('html, body').animate({
-            scrollTop: jQuery(target).offset().top
-        }, 1000);
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
+            window.scrollTo(0, jQuery(target).offset().top);
+        }
+        else{
+            jQuery('html, body').animate({
+                scrollTop: jQuery(target).offset().top
+            }, 1000);
+        }
     }
     //write a click function for each menu item that calls the smoothScroll function
     jQuery('.nav-menu.center .menu-item a').click(function(e){
@@ -109,7 +114,7 @@
         smoothScroll(target);
     });
     jQuery('.mobile-menu .menu-item a').click(function(e){
-        if(this.hash){
+        if($(this)[0].hash){
             e.preventDefault();
             if(window.location.href != window.location.origin+'/'){
             window.location.href = jQuery(this).attr('href');

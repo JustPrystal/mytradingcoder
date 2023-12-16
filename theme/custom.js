@@ -28,18 +28,21 @@ $(document).ready(function(){
 
     // links scroll
     $("a").on('click', function(event) {
-      if (this.hash !== "") {
+      if ($(this)[0].hash !== "") {
         // Prevent default anchor click behavior
         event.preventDefault();
         if($(this).parents('.mobile-menu').length > 0){
           $('.mobile-menu').removeClass('active');
           $('.header').removeClass('menu-open');
         }
-        var hash = this.hash;
-        
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 50);
+        var hash = $(this)[0].hash;
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {  
+            window.scrollTo(0, $(hash).offset().top);
+        }else{
+            $('html, body').animate({
+            scrollTop: $(hash).offset().top
+            }, 50);
+        }
 
         window.location.hash = hash;
       }
