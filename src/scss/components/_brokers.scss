@@ -104,6 +104,9 @@
                         margin-bottom:30px;
                         cursor:pointer;
                         transition:all .3s ease;
+                        @include responsive(xs){
+                            padding:20px 15px;
+                        }
                         &:hover, &.active{
                             // background-color:$purple;
                             // color:#fff;
@@ -145,6 +148,9 @@
                                 }
                                 @include responsive(lg){
                                     font-size: 16px;
+                                }
+                                @include responsive(xs){
+                                    gap:10px;
                                 }
                             }
                         }

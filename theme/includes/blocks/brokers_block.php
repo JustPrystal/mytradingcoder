@@ -37,7 +37,7 @@
         </div>
     </div>
 </div>
-<!-- <script>
+<script>
     jQuery('.brokers-list .broker-item').click(function(){
         if(jQuery(this).hasClass('active')){
             jQuery(this).find('.broker-body').slideUp();
@@ -90,4 +90,4 @@
             }
         ]
     })
-</script> -->
+</script>
