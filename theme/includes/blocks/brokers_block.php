@@ -25,7 +25,9 @@
                                     </div>
                                 </div>
                                 <div class="broker-body">
-                                    <?php echo $broker['information']; ?>
+                                    <div class="broker-body-inner">
+                                        <?php echo $broker['information']; ?>
+                                    </div>
                                 </div>
                             </div>
                         <?php }?>
@@ -35,7 +37,7 @@
         </div>
     </div>
 </div>
-<script>
+<!-- <script>
     jQuery('.brokers-list .broker-item').click(function(){
         if(jQuery(this).hasClass('active')){
             jQuery(this).find('.broker-body').slideUp();
@@ -88,4 +90,4 @@
             }
         ]
     })
-</script>
+</script> -->

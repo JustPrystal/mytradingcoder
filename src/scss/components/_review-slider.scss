@@ -149,6 +149,7 @@
                         -webkit-box-orient: vertical; 
                         @include responsive(xs){
                             font-size: 12px;
+                            max-height: 72px;
                         }
                         p{
                             margin: 0;

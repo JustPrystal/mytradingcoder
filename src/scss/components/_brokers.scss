@@ -150,16 +150,18 @@
                         }
                         .broker-body{
                             display:none;
-                            text-align: left;
-                            padding: 15px;
-                            border-radius: 20px;
-                            background-color: white;
+                            .broker-body-inner{
+                                text-align: left;
+                                padding: 15px;
+                                border-radius: 20px;
+                                background-color: white;
+                            }
                         }
                         &.active{
                             svg{
                                 transform:rotate(270deg);
                             }
-                            .broker-body{
+                            .broker-body-inner{
                                 margin-top:20px;
                               
                             }
